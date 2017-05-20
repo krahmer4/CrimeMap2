@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CrimeMap2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="YU4-m0-WbA">
+                                <rect key="frame" x="-2" y="629" width="379" height="31"/>
+                                <connections>
+                                    <action selector="DateSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ehu-Vh-50M"/>
+                                    <action selector="DateSliderUp:" destination="BYZ-38-t0r" eventType="valueChanged" id="jCM-HC-9pm"/>
+                                </connections>
+                            </slider>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DZU-Dk-hk1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="539"/>
+                            </mapView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjm-cj-xoI">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Rockford Crime Map" id="Hox-mO-w81"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Izj-yA-XC3">
+                                <rect key="frame" x="271" y="611" width="88" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last 24 Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flq-JG-B1q">
+                                <rect key="frame" x="0.0" y="611" width="108" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fjm-cj-xoI" secondAttribute="trailing" id="Fgi-iY-Ho3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YU4-m0-WbA" secondAttribute="bottom" constant="8" symbolic="YES" id="HQb-cR-K7v"/>
+                            <constraint firstItem="fjm-cj-xoI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="N72-n2-xOF"/>
+                            <constraint firstItem="DZU-Dk-hk1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UWB-ZQ-O6u"/>
+                            <constraint firstItem="flq-JG-B1q" firstAttribute="leading" secondItem="YU4-m0-WbA" secondAttribute="leading" id="d5V-SE-4vN"/>
+                            <constraint firstItem="fjm-cj-xoI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="evz-Wg-u2b"/>
+                            <constraint firstItem="DZU-Dk-hk1" firstAttribute="top" secondItem="fjm-cj-xoI" secondAttribute="bottom" id="lQP-Aj-Ofz"/>
+                            <constraint firstItem="fjm-cj-xoI" firstAttribute="leading" secondItem="DZU-Dk-hk1" secondAttribute="leading" id="pTd-oN-EfG"/>
+                            <constraint firstItem="DZU-Dk-hk1" firstAttribute="leading" secondItem="flq-JG-B1q" secondAttribute="leading" id="pU6-Ic-3HB"/>
+                            <constraint firstItem="fjm-cj-xoI" firstAttribute="trailing" secondItem="DZU-Dk-hk1" secondAttribute="trailing" id="rgb-Zc-XMY"/>
+                            <constraint firstItem="DZU-Dk-hk1" firstAttribute="trailing" secondItem="YU4-m0-WbA" secondAttribute="trailing" id="vGx-s6-cNT"/>
+                            <constraint firstItem="flq-JG-B1q" firstAttribute="top" secondItem="DZU-Dk-hk1" secondAttribute="bottom" constant="8" symbolic="YES" id="xj2-1L-nwp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblCrimeRange" destination="flq-JG-B1q" id="Lqm-ah-4IT"/>
+                        <outlet property="lblcount" destination="Izj-yA-XC3" id="0YV-4a-USD"/>
+                        <outlet property="mapView" destination="DZU-Dk-hk1" id="Xda-8J-amt"/>
+                        <outlet property="navigationBar" destination="fjm-cj-xoI" id="7AF-by-zOE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
+        </scene>
+    </scenes>
+</document>
